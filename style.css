@@ -1,0 +1,136 @@
+html {
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+If we dont set this properties, when we create the boxes and give width and height to them to the card and different sections, the boxes dont fit and they break out, even though we work with % and same dimensions. This is because our Box Sixing is set to default content-box 
+*/
+
+body {
+  padding: 20px; /*We use this so the card is not in the top left corner. */
+}
+
+h2, h4, p {
+  margin: 0;
+} /*With this we fix the default margins that comes with h2, h4 and p elements*/
+
+#card {
+  width: 600px; /*We are just gonna use this size randomly, like it looks like this*/
+  height: 400px;
+  /*border: 3px solid red;*/
+  box-shadow: 2px 3px 7px 0px rgba(0,0,0,0.35);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#top-section {
+  width: 100%;
+  height: 45%;/*Relative to its parent container, we are just using random 40% as it look likes this*/
+  /*border: 2px solid green;*/
+  padding: 25px;
+}
+
+#bottom-section {
+  width: 100%;
+  height: 55%;
+  /*border: 2px solid blue;*/
+  color: white;
+}
+
+/*As the bottom left and right section container and next to each other and not one on top the another one, we need to make them inline block elements. */
+#bottom-left-section {
+  display: inline-block; /*We set this to be possible for bottom right section to be next to it*/
+  width: 50%; /*This is relative to its parent container*/
+  height: 100%;
+  /*border: 2px solid orange;*/ /*We use this when we fist started to set out HTML and CSS style for helping viewing the containers sections.*/
+  vertical-align: top;
+  background-color: #2ab2af;
+  padding: 25px;
+}
+
+#bottom-right-section {
+  display: inline-block;/*We set this to be possible for bottom left section to be next to it*/
+  width: 50%; /*This is relative to its parent container*/
+  height: 100%;
+  /*border: 2px solid black;*/ /*We use this when we fist started to set out HTML and CSS style for helping viewing the containers sections.*/
+  vertical-align: top;
+  background-color: #2ebfbd;
+  padding: 25px;
+}
+
+#top-section h2{
+  color: #2ab2af;/*Here we color the title*/
+  margin-bottom: 20px;
+} 
+
+#top-section h4{
+  color: #c0df34;/*Here we color the sub-title*/
+  margin-bottom: 10px;
+}
+
+#top-section p{
+  color: #98a6bd;/*Here we color the paragraph element under the sub-title*/
+}
+
+button {
+  color: white;
+  background-color: #c0df34;
+  border: none; /*By default the bottom comes with a border*/
+  padding: 10px;
+  width: 100%; /*We use the 100% of the horizontal size of the container*/
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #A9C42D;
+  transform: scale(1.02); /*This changes the scale of the button when in hover*/
+}
+
+#price {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+#bottom-left-section h4 {
+  margin-bottom: 25px;
+} /*Here i give more space down the MONTHLY SUSCRIPCION*/
+
+#bottom-left-section p {
+  font-size: 0.8rem;
+  margin-bottom: 40px;
+} /*This styles the only p tag in the bottom left section, that is the "full access...."*/
+
+#price-frequency, #price {
+  display: inline-block;
+}
+
+#price-container {
+  margin-bottom: 10px;
+}
+
+#price-frequency {
+  position: relative;
+  top: -3px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-left: 5px;
+} /*Here we are changing the position to relative cause we want to move the text a little bit more up, is sitting down by default, so we move it up -3px*/
+
+ul {
+  padding: 0; /*With this we delete the already margin that gives the list to the item list elements*/
+  list-style: none; /*This deletes the bullet points of the list.*/
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+li {
+  line-height: 1.58;
+} /*This changes the line height of the list items, so the items have more space in between*/
